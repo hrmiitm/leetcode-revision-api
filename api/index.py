@@ -1,8 +1,36 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.responses import HTMLResponse
 import requests
 import random
 
 app = FastAPI()
+
+@app.get('/', response_class=HTMLResponse)
+def root():
+    return """
+        <h1>LeetCode Revision API</h1>
+        <p>Get random solved LeetCode questions for revision</p>
+        
+        <hr>
+        
+        <h2>API Endpoint</h2>
+        <p><strong>GET /{leetcodeid}/{n}</strong></p>
+        
+        <h3>Parameters:</h3>
+        <ul>
+            <li><strong>leetcodeid</strong> - Your LeetCode username</li>
+            <li><strong>n</strong> - Number of random questions to retrieve</li>
+        </ul>
+        
+        <h3>Example:</h3>
+        <p><a href="/hrmiitm/5">/hrmiitm/5</a></p>
+        
+        <hr>
+        
+        <h2>Response Format</h2>
+        <p>Returns a JSON array of random solved problems:</p>
+        <pre>
+    """
 
 
 @app.get("/{leetcodeid}/{n}")
