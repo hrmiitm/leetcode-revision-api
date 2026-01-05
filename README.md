@@ -40,7 +40,8 @@ https://your-project.vercel.app/api/hrmiitm/5
 ## Run Locally
 
 ```bash
-pip install fastapi requests
+pip install fastapi requests uvicorn
+
 uvicorn api.index:app --reload
 ```
 
