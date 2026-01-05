@@ -2,7 +2,7 @@
 
 A small FastAPI-based serverless API deployed on Vercel that returns random solved LeetCode questions for a given user.
 
-[Here Deployed](https://leetcode-revision-api.vercel.app/hrmiitm/5): https://leetcode-revision-api.vercel.app/hrmiitm/5
+[Here Deployed](https://leetcode-revision-api.vercel.app): `https://leetcode-revision-api.vercel.app`
 
 ---
 
